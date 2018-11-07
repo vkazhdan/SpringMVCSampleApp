@@ -22,7 +22,7 @@ import com.javacodegeeks.service.EmployeeService;
 
 @Controller
 @RequestMapping("/")
-@ComponentScan("com.javacodegeeks") 
+@ComponentScan("com.javacodegeeks")
 public class AppController {
 	
     @Autowired
