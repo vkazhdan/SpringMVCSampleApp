@@ -17,12 +17,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeDAO dao;
 
 	@Override
-	public void deleteEmployeeBySsn(String ssn) {
-		// TODO Auto-generated method stub
-		dao.deleteEmployeeBySsn(ssn);
-	}
-
-	@Override
 	public Employee findById(int id) {		
 		return dao.findById(id);
 	}
@@ -39,11 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Employee entity = dao.findById(employee.getId());
         if(entity!=null){
             entity.setName(employee.getName());
-            entity.setJoiningDate(employee.getJoiningDate());
-            entity.setSalary(employee.getSalary());
-            entity.setSsn(employee.getSsn());
         }
-		
 	}
 
 	@Override
@@ -52,13 +42,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Employee findEmployeeBySsn(String ssn) {
-		return dao.findEmployeeBySsn(ssn);
+	public void deleteEmployee(int id) {
+		Employee employee = dao.findById(id);
+		if (employee != null) {
+			dao.delete(employee);
+		}
 	}
-	
-	public boolean isEmployeeSsnUnique(Integer id, String ssn) {
-        Employee employee = findEmployeeBySsn(ssn);
-        return ( employee == null || ((id != null) && (employee.getId() == id)));
-    }
-
 }

@@ -12,20 +12,12 @@ import com.javacodegeeks.model.Employee;
 public class EmployeeDAOImpl extends AbstractDAO<Integer, Employee> implements EmployeeDAO {
 
 	@Override
-	public void deleteEmployeeBySsn(String ssn) {
-		Query query = getSession().createSQLQuery("delete from Employee where ssn = :ssn");
-        query.setString("ssn", ssn);
-        query.executeUpdate();
-	}
-
-	@Override
 	public Employee findById(int id) {
 		return getByKey(id);
 	}
 
 	@Override
 	public void saveEmployee(Employee employee) {
-		
 		persist(employee);
 	}
 

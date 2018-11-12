@@ -15,6 +15,7 @@ public class EmployeeServiceTest {
 		System.out.println("Started");
 		System.out.println("EmployeeService: " + employeeService);
 		System.out.println("Employees: " + employeeService.findAllEmployees());
+		System.out.println("Employee [1]: " + employeeService.findById(1));
 	}
 
 	public static void main(String[] args) {
