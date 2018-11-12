@@ -32,24 +32,6 @@
             </tr>
          
             <tr>
-                <td><label for="joiningDate">Joining Date: </label> </td>
-                <td><form:input path="joiningDate" id="joiningDate"/></td>
-                <td><form:errors path="joiningDate" cssClass="error"/></td>
-            </tr>
-     
-            <tr>
-                <td><label for="salary">Salary: </label> </td>
-                <td><form:input path="salary" id="salary"/></td>
-                <td><form:errors path="salary" cssClass="error"/></td>
-            </tr>
-     
-            <tr>
-                <td><label for="ssn">SSN: </label> </td>
-                <td><form:input path="ssn" id="ssn"/></td>
-                <td><form:errors path="ssn" cssClass="error"/></td>
-            </tr>
-     
-            <tr>
                 <td colspan="3">
                     <c:choose>
                         <c:when test="${edit}">
