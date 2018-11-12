@@ -26,7 +26,7 @@
   </build>
   <properties>
         <springframework.version>5.0.5.RELEASE</springframework.version>
-        <hibernate.version>5.2.16.Final</hibernate.version>
+        <hibernate.version>5.3.7.Final</hibernate.version>
         <mysql.connector.version>5.0.4</mysql.connector.version>
         <joda-time.version>2.3</joda-time.version>
         <testng.version>6.9.4</testng.version>
@@ -63,7 +63,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.5.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
 
         <!-- jsr303 validation -->
@@ -75,7 +75,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.2.5.Final</version>
+            <version>5.4.2.Final</version>
         </dependency>
 
         <!-- MySQL -->
