@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+    <h1>Employees</h1>
+    <table>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}"/>
+            <td th:text="${employee.name}"/>
+            <td>
+                <a th:href="@{'/employee/' + ${employee.id}}">Edit</a>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Add Emplloyee</h1>
+    <form action="#" th:action="@{/employees}" th:object="${newEmployee}" method="post">
+        <table border="1">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
