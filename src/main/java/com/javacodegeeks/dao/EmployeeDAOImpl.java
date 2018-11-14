@@ -27,11 +27,4 @@ public class EmployeeDAOImpl extends AbstractDAO<Integer, Employee> implements E
         return (List<Employee>) criteria.list();
 	}
 
-	@Override
-	public Employee findEmployeeBySsn(String ssn) {
-		Criteria criteria = createEntityCriteria();
-        criteria.add(Restrictions.eq("ssn", ssn));
-        return (Employee) criteria.uniqueResult();
-	}
-
 }
